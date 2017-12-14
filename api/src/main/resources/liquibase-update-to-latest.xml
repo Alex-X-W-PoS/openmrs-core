@@ -18,4 +18,27 @@
 
     <include file="liquibase-update-to-2.0.xml"/>
     <include file="liquibase-update-to-2.1.xml"/>
+	<changeSet author="alexxwpos" id="4887541254887-37">
+        <createTable tableName="itemhlb">
+            <column autoIncrement="true" name="itemhlb_id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column defaultValue="" name="nombre" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="codigoItem" type="varchar(255)"/>
+            <column name="linea" type="varchar(255)"/>
+            <column name="unidadMedida" type="varchar(255)"/>
+            <column name="codigoSector" type="varchar(255)"/>
+            <column name="cantidadMinimaStock" type="int"/>
+            <column defaultValueBoolean="false "name="conIVA" type="BOOLEAN"/>
+            <column name="date_created" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uuid" type="char(38)" />
+        </createTable>
+        <modifySql dbms="mssql">
+            <replace replace="CHAR(38)" with="UNIQUEIDENTIFIER NOT NULL DEFAULT NEWSEQUENTIALID()" />
+        </modifySql>
+    </changeSet>
 </databaseChangeLog>

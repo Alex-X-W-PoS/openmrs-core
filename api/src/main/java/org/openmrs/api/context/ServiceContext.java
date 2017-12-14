@@ -38,6 +38,7 @@ import org.openmrs.api.ProviderService;
 import org.openmrs.api.SerializationService;
 import org.openmrs.api.UserService;
 import org.openmrs.api.VisitService;
+import org.openmrs.api.ItemHLBService;
 import org.openmrs.hl7.HL7Service;
 import org.openmrs.logic.LogicService;
 import org.openmrs.messagesource.MessageSourceService;
@@ -193,6 +194,10 @@ public class ServiceContext implements ApplicationContextAware {
 	public LocationService getLocationService() {
 		return getService(LocationService.class);
 	}
+        
+        public ItemHLBService getItemHLBService() {
+            return getService(ItemHLBService.class)
+        }
 	
 	/**
 	 * @return observation services
@@ -358,6 +363,10 @@ public class ServiceContext implements ApplicationContextAware {
 	public void setLocationService(LocationService locationService) {
 		setService(LocationService.class, locationService);
 	}
+        
+        public void setItemHLBService(ItemHLBService itemhlbService) {
+            setService(ItemHLBService.class, itemhlbService);
+        }
 	
 	/**
 	 * @param formService the formService to set
