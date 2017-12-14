@@ -10,98 +10,110 @@
 
 package org.openmrs;
 
-public class ItemHLB {
-    
-    public static final long serialVersionUID = 75844L; 
-    
-    private Integer itemHLBid;
-    
-    private String nombre;
-    
-    private String codigoItem;
-    
-    private String linea;
-    
-    private String unidadMedida;
-    
-    private String codigoSector;
-    
-    private Integer cantidadMinimaStock;
-    
-    private boolean conIVA;
-    
-    public ItemHLB(){
-        
-    }
-    
-    public ItemHLB (Integer itemHLBid){
-        this.itemHLBid = itemHLBid;
-    }
+public class ItemHLB extends BaseOpenmrsObject {
+	
+	public static final long serialVersionUID = 75844L;
+	
+	private Integer itemHLBid;
+	
+	private String nombre;
+	
+	private String codigoItem;
+	
+	private String linea;
+	
+	private String unidadMedida;
+	
+	private String codigoSector;
+	
+	private Integer cantidadMinimaStock;
+	
+	private boolean conIVA;
+	
+	public ItemHLB() {
+		
+	}
+	
+	public ItemHLB(Integer itemHLBid) {
+		this.itemHLBid = itemHLBid;
+	}
+	
+	public Integer getItemHLBid() {
+		return itemHLBid;
+	}
+	
+	public void setItemHLBid(Integer itemHLBid) {
+		this.itemHLBid = itemHLBid;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getCodigoItem() {
+		return codigoItem;
+	}
+	
+	public void setCodigoItem(String codigoItem) {
+		this.codigoItem = codigoItem;
+	}
+	
+	public String getLinea() {
+		return linea;
+	}
+	
+	public void setLínea(String linea) {
+		this.linea = linea;
+	}
+	
+	public String getUnidadMedida() {
+		return unidadMedida;
+	}
+	
+	public void setUnidadMedida(String unidadMedida) {
+		this.unidadMedida = unidadMedida;
+	}
+	
+	public String getCodigoSector() {
+		return codigoSector;
+	}
+	
+	public void setCodigoSector(String codigoSector) {
+		this.codigoSector = codigoSector;
+	}
+	
+	public Integer getCantidadMinimaStock() {
+		return cantidadMinimaStock;
+	}
+	
+	public void setCantidadMinimaStock(Integer cantidadMinimaStock) {
+		this.cantidadMinimaStock = cantidadMinimaStock;
+	}
+	
+	public boolean isConIVA() {
+		return conIVA;
+	}
+	
+	public void setConIVA(boolean conIVA) {
+		this.conIVA = conIVA;
+	}
 
-    public Integer getItemHLBid() {
-        return itemHLBid;
-    }
-
-    public void setItemHLBid(Integer itemHLBid) {
-        this.itemHLBid = itemHLBid;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCodigoItem() {
-        return codigoItem;
-    }
-
-    public void setCodigoItem(String codigoItem) {
-        this.codigoItem = codigoItem;
-    }
-
-    public String getLinea() {
-        return linea;
-    }
-
-    public void setLínea(String linea) {
-        this.linea = linea;
-    }
-
-    public String getUnidadMedida() {
-        return unidadMedida;
-    }
-
-    public void setUnidadMedida(String unidadMedida) {
-        this.unidadMedida = unidadMedida;
-    }
-
-    public String getCodigoSector() {
-        return codigoSector;
-    }
-
-    public void setCodigoSector(String codigoSector) {
-        this.codigoSector = codigoSector;
-    }
-
-    public Integer getCantidadMinimaStock() {
-        return cantidadMinimaStock;
-    }
-
-    public void setCantidadMinimaStock(Integer cantidadMinimaStock) {
-        this.cantidadMinimaStock = cantidadMinimaStock;
-    }
-
-    public boolean isConIVA() {
-        return conIVA;
-    }
-
-    public void setConIVA(boolean conIVA) {
-        this.conIVA = conIVA;
-    }
-    
-    
-    
+	@Override
+	public Integer getId() {
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * @since 1.5
+	 * @see org.openmrs.OpenmrsObject#setId(java.lang.Integer)
+	 */
+	@Override
+	public void setId(Integer id) {
+		throw new UnsupportedOperationException();
+	}
+	
 }

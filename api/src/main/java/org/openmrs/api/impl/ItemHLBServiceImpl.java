@@ -69,6 +69,6 @@ public class ItemHLBServiceImpl extends BaseOpenmrsService implements ItemHLBSer
     
     @Override
     public void purgeItemHLB(ItemHLB itemhlb) throws APIException {
-        return dao.deleteItemHLB(itemhlb);
+         dao.deleteItemHLB(itemhlb);
     }
 }

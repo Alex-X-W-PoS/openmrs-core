@@ -384,9 +384,6 @@ public class Context {
             return getServiceContext().getItemHLBService();
         }
         
-        public void setItemHLBService (ItemHLBService itemhlbService){
-            setService(ItemHLBService.class, itemhlbService);
-        }
 
 	/**
 	 * @return encounter-related services

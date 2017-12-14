@@ -196,7 +196,7 @@ public class ServiceContext implements ApplicationContextAware {
 	}
         
         public ItemHLBService getItemHLBService() {
-            return getService(ItemHLBService.class)
+            return getService(ItemHLBService.class);
         }
 	
 	/**

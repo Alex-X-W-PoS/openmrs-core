@@ -446,7 +446,7 @@ public class AdministrationServiceTest extends BaseContextSensitiveTest {
 	@Test
 	public void getAllGlobalProperties_shouldReturnAllGlobalPropertiesInTheDatabase() {
 		executeDataSet(ADMIN_INITIAL_DATA_XML);
-		Assert.assertEquals(21, Context.getAdministrationService().getAllGlobalProperties().size());
+		Assert.assertEquals(25, Context.getAdministrationService().getAllGlobalProperties().size());
 	}
 	
 	/**
@@ -511,9 +511,9 @@ public class AdministrationServiceTest extends BaseContextSensitiveTest {
 		executeDataSet(ADMIN_INITIAL_DATA_XML);
 		AdministrationService as = Context.getAdministrationService();
 		
-		Assert.assertEquals(21, as.getAllGlobalProperties().size());
+		Assert.assertEquals(25, as.getAllGlobalProperties().size());
 		as.purgeGlobalProperty(as.getGlobalPropertyObject("a_valid_gp_key"));
-		Assert.assertEquals(20, as.getAllGlobalProperties().size());
+		Assert.assertEquals(24, as.getAllGlobalProperties().size());
 	}
 	
 	/**
