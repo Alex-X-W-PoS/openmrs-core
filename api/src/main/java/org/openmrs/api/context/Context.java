@@ -51,7 +51,6 @@ import org.openmrs.api.ProviderService;
 import org.openmrs.api.SerializationService;
 import org.openmrs.api.UserService;
 import org.openmrs.api.VisitService;
-import org.openmrs.api.ItemHLBService;
 import org.openmrs.api.db.ContextDAO;
 import org.openmrs.hl7.HL7Service;
 import org.openmrs.logic.LogicService;
@@ -380,9 +379,6 @@ public class Context {
 		return getServiceContext().getConceptService();
 	}
         
-        public static ItemHLBService getItemHLBService() {
-            return getServiceContext().getItemHLBService();
-        }
         
 
 	/**
